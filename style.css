@@ -1,0 +1,30 @@
+body
+{
+  background-color:#EDDA74;
+}
+
+.rightcol
+{
+  text-align:right;
+  font-weight:bold;
+}
+
+#fullscreen
+{
+  border-spacing: 5px;
+  margin=100px;
+}
+
+.prompt
+{
+  font-weight:bold;
+  text-align:left;
+}
+
+#donepic
+{
+  float:left;
+  padding:30px;
+  width: 250px;
+
+}

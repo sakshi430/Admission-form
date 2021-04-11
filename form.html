@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<!-- html admission from -->
+
+<head>
+  <title>Admission form</title>
+
+<!-- css and js file added -->
+
+  <script type="text/javascript" src="validation.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQFezESxw_WviOZ92WS1GEARGkDcAKJG7-02Q&usqp=CAU">
+  <form id="fullscreen">
+    <h2>Enter student details</h2>
+    <table border="0" style="border-spacing: 5px;">
+      <tr>
+        <td class="rightcol">Student's first name:</td>
+        <td><input id="fname" type="text" name="fname" onblur="validatefname();" required /></td>
+        <td class="prompt" id="fnamemsg"></td>
+      </tr>
+      <tr>
+        <td class="rightcol">Student's last name:</td>
+        <td><input id="lname" type="text" /></td>
+      </tr>
+      <tr>
+        <td class="rightcol">Birthdate:</td>
+        <td><input id="bday" type="date" /></td>
+      </tr>
+      <tr>
+        <td class="rightcol">Students's age:</td>
+        <td><input type="number" id="age" name="age" min="18" value="18" /></td>
+      </tr>
+      <tr>
+        <td class="rightcol">Student's mobile number:</td>
+        <td><input type="text" id="mobile" name="mobile" onblur="validatemobile()" placeholder="xxxx xxxxxx" /></td>
+        <td class="prompt" id="mobmsg"></td>
+      </tr>
+      <tr>
+        <td class="rightcol">Enter your email:</td>
+        <td> <input type="email" id="email" name="email"></td>
+      </tr>
+      <tr>
+        <td class="rightcol">Gender:</td>
+        <td><input id="male" name="gender" type="radio" value="male" required />
+          <label for="male">Male</label>
+          <input id="female" name="gender" type="radio" value="female" required />
+          <label for="female">Female</label>
+          <input id="other" name="gender" type="radio" value="other" required />
+          <label for="other">Other</label></td>
+      </tr>
+      <tr>
+        <td class="rightcol">Select three subjects you want to opt for:</td>
+        <td><input id="sub1" name="sub" type="checkbox" value="algebra" onclick="return ValidateSubjects();" />
+          <label for="sub1">Algebra</label>
+          <input id="sub2" name="sub" type="checkbox" value="geometry" onclick="return ValidateSubjects();" />
+          <label for="sub2"> Geometry</label>
+          <input id="sub3" name="sub" type="checkbox" value="chemistry" onclick="return ValidateSubjects();" />
+          <label for="sub3">Chemistry</label>
+          <input id="sub4" name="sub" type="checkbox" value="physics" onclick="return ValidateSubjects();" />
+          <label for="sub4">Physics</label>
+          <input id="sub5" name="sub" type="checkbox" value="biology" onclick="return ValidateSubjects();" />
+          <label for="sub5">Biology</label></td>
+        <td class="prompt" id="submsg"></td>
+      </tr>
+      <tr>
+        <td class="rightcol">Nationality:</td>
+        <td><input id="nationality" type="text" required /></td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center" style="padding:20px"><button type="Submit" onclick="validateall();">Submit</button></td>
+      </tr>
+    </table>
+<!-- image to be displayed after button is clicked -->
+
+    <img id="donepic" src="https://cdn3.iconfinder.com/data/icons/medical-3-1/512/approve_test-512.png" style="visibility:hidden"/>
+
+    <p id="info">
+    </p>
+
+  </form>
+</body>
+
+</html>
